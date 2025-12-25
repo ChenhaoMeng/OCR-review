@@ -65,7 +65,7 @@ def extract_text_with_vision(base64_image):
     
     try:
         response = client.chat.completions.create(
-            model="Qwen3-VL-32B",  # 使用视觉模型
+            model="qwen3vl",  # 使用视觉模型
             messages=[
                 {
                     "role": "user",
@@ -111,7 +111,7 @@ def analyze_grammar(text):
 
     try:
         response = client.chat.completions.create(
-            model="DeepSeek-V3-685B", # 文本分析能力更强
+            model="deepseek-v3", # 文本分析能力更强
             messages=[
                 {"role": "system", "content": "你是一个输出纯 JSON 的德语助教。"},
                 {"role": "user", "content": prompt}
